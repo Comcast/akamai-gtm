@@ -6,6 +6,7 @@ all: lint vet updatedeps build
 
 updatedeps:
 	go get
+	go get -u github.com/golang/lint/golint
 
 install:
 	go install
