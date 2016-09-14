@@ -8,7 +8,7 @@ script:
   - make
 
 matrix:
-  allow_failure:
+  allow_failures:
     - go: tip
 
 deploy:
