@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Comcast/akamai-gtm.svg?branch=master)](https://travis-ci.org/Comcast/akamai-gtm)
+
 # akamai-gtm
 
 A Golang-based CLI for Akamai [GTM](https://developer.akamai.com/api/luna/config-gtm/overview.html).
