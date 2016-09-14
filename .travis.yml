@@ -1,0 +1,23 @@
+language: go
+
+go:
+  - 1.6
+  - tip
+
+script:
+  - make
+
+matrix:
+  allow_failure:
+    - go: tip
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: "I67hxjvx3JHlPk2f84ZF8KIboG6SLiVnefhiqJniwfOCdK2tMXB5CettTtu00C4ziWINFKv2g88v0uiW7wTb+YP7dLe3/GV8NBqqlOG9ELytED1HV+nqEsQZ9yu84C38a7bHfp1MlxQixZ66kMjspi3Wdw055/9pyv6cMeo+SGILMt3bBkh+EabaY/3SIX7NwKoGf8aAOz/Mz0HDXkO7lfjtvSUQMP4tjGaOdmxT90CpSGCV8vdQ70arKhRSGEyHoP/5uDkqTVZ9bvf/brFniNH4OO8Hp/Haf1zEvSVujqGPeSzFAC3V/yQOO3F0327WjroMnjjQZzHOG8dJMkknaLAwOyq2hFf+XhiW6J0qr4rzeXxcrk+6vV2YuHmRN7ka7hSopv6U9hypXO14f1tFrjQvdOcsCf4DKOWbYCvZmQ+S/zVFDi9gsVtWFrteenW/0HUFoEf1T2GipPLXPhLDaPEt5FB38ZltBV0koSymnrVBN5Y6kOTpn+8yr4UKnuK6d4spYAn3AVGsTENMbttxKcOy7tyc/YaHupvjVAEjtl4tdpPqSKF/1atJY7uyxJfd4nvcIBbMSa61XypNlM5IbaiYYoM3RQo0hlzk2FYmsQd3FEYvjAz4jN68Sy8hG5Jj5ruhvcIxR9MYPtGHXWYsLt3VzBD3hAQSYgLCSIBdkjg="
+  file_glob: true
+  file: release/akamai-gtm_*
+  on:
+    repo: Comcast/akamai-gtm
+    tags: true
