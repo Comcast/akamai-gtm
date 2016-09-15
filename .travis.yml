@@ -16,7 +16,13 @@ deploy:
   api_key:
     secure: "TRMIbwsNcOJF6YCGgm7TyVzQz6uQ9uY3wxg2JfE6qPie3XJhVfU6oq2rh0h9hnAQRyT5FJhtSUJB2AUIhPBPQlz2vqeQqdU2EuPaKB3k53h0uPFSOAebNa2DXKusjmyDNAyClRaVNWj+VXhMIvjNE2ddvodH/YLjI1IODOgAYVtxkAHDhKBToRk/Rk/Bh5VIeHV7ADfjxkc3agG6RMW0MFxyTxU+/2CcmEhH4f791tUAw5RjS+m1WOzEUzB/YS3IRCMej+ymGj6GgINy7ADzjS7ltXj66rpDgPjYvorCw1eQ6mTDB9oy7SiWg19uOpG8Agr0GqPdVfy9u+qy4580dWdPdZ3a8SGRTgpQsq71PublZ0bdGD7BCbBphlZ3eX43ScVxTTbuv0NGxrM1GDJs0rQ932gndXBDEbrs5iU98VaZhxGU2G1g49BEydkT/cqol7bRMMpegIKVQvo5FPwf/QeJhtuP49i0NRYDmrNRh4O4pfka3ZmF3FQk/Brr3yGTEzjVaiMPL1S0VJNUlt81FMoNA0S0KtRiVJ9Z/rQN2Hxt4oJo9+Aiiq2mnAszqRti4LX+UKNBbdFLXjnLwaHxgyrynvCT55GaTJydcv9XbLA1Zx37nAsUkgAjJHeglQTkd60BVV6N97imd9xQsOFOwMRZNsx6hUJBJbc2gtX46RI="
   skip_cleanup: true
+  file_glob: true
   file: release/akamai-gtm_*
   on:
     repo: Comcast/akamai-gtm
     tags: true
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
