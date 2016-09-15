@@ -1,22 +1,21 @@
 language: go
 
 go:
-  - 1.6
-  - tip
+- 1.6
+- tip
 
 script:
-  - make
+- make
 
 matrix:
   allow_failures:
-    - go: tip
+  - go: tip
 
 deploy:
   provider: releases
-  skip_cleanup: true
   api_key:
-    secure: "ttyGRO+DWTm3CZD5cTboC4qlwjP6/CaI0yJyLhyGGEy/uVH8Ul2gErMDPivA903Hw3mhJd9Yfw+p3b8zJKRBwKy3U34CSrk7uQvzhWs4BH/21xmxZKYmB4hjs930ecf+QuzzkFvBq/gSDGblkhKvgfdxRezSNeTJCsSMeE3QzsFFrXyPow6bQ1NuoVJ1unbWXZNIQAQ7EWKEW20Jl7MNhWmDJK781g36hoxz3Vfyy4XZr37FZgLcNJeZWls4JnzNNwi5nb4yWQy/hfRfBBXkcU32fH+RgCv7+g7uIgypDtNp9dL0WWVK/rof2CkSIshuffI6AZIaCq4kK5kyCICLmsGK+Q1FEkFXnCKpzRQ5F7818aKo5vjVxK+wYE8QvB7FxlRpDwKDUlnIvBv43ZwVBD7Xvnl5xeHY5yl7eS+PiJfA2GsV/yriAi6a4jJ/z5EHQBloLS7sfafQ9YL09hk4egGfIXQQR2Pzhzc4+NmPmEY1O1gdgXjCQ28GJYrpIjhENjMDJqtVd1tFGehJAbp5hF0Dak6bb7t7zjo0H0Jnt1sJXd0jATk3YXkzE4BUg8obgR2aeYzfYgORUc0FrPBE/o/Xu05ZK7d0wprh4Srf1EuCn9oDUaYKf9Uxw1Gv9nvVoMrdmgHRHhWp04+p4GIzL/35JT0qP2Fyu1XE9G5fl6Q="
-  file_glob: true
+    secure: "TRMIbwsNcOJF6YCGgm7TyVzQz6uQ9uY3wxg2JfE6qPie3XJhVfU6oq2rh0h9hnAQRyT5FJhtSUJB2AUIhPBPQlz2vqeQqdU2EuPaKB3k53h0uPFSOAebNa2DXKusjmyDNAyClRaVNWj+VXhMIvjNE2ddvodH/YLjI1IODOgAYVtxkAHDhKBToRk/Rk/Bh5VIeHV7ADfjxkc3agG6RMW0MFxyTxU+/2CcmEhH4f791tUAw5RjS+m1WOzEUzB/YS3IRCMej+ymGj6GgINy7ADzjS7ltXj66rpDgPjYvorCw1eQ6mTDB9oy7SiWg19uOpG8Agr0GqPdVfy9u+qy4580dWdPdZ3a8SGRTgpQsq71PublZ0bdGD7BCbBphlZ3eX43ScVxTTbuv0NGxrM1GDJs0rQ932gndXBDEbrs5iU98VaZhxGU2G1g49BEydkT/cqol7bRMMpegIKVQvo5FPwf/QeJhtuP49i0NRYDmrNRh4O4pfka3ZmF3FQk/Brr3yGTEzjVaiMPL1S0VJNUlt81FMoNA0S0KtRiVJ9Z/rQN2Hxt4oJo9+Aiiq2mnAszqRti4LX+UKNBbdFLXjnLwaHxgyrynvCT55GaTJydcv9XbLA1Zx37nAsUkgAjJHeglQTkd60BVV6N97imd9xQsOFOwMRZNsx6hUJBJbc2gtX46RI="
+  skip_cleanup: true
   file: release/akamai-gtm_*
   on:
     repo: Comcast/akamai-gtm
