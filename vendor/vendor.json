@@ -1,0 +1,37 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "mT7Ktz0BjsOI4ri9ywfltkIljCg=",
+			"path": "github.com/codegangsta/cli",
+			"revision": "75b97d09d9f5792ff997e249a330a3ca28f8b537",
+			"revisionTime": "2016-05-05T00:04:10Z"
+		},
+		{
+			"checksumSHA1": "hJFz7fRtr8IIItA2pJwwsyuRuHQ=",
+			"path": "github.com/comcast/go-edgegrid/edgegrid",
+			"revision": "e03bc9d8e9ed7b1ba67735ac32464c9f77005d58",
+			"revisionTime": "2016-11-15T02:41:37Z"
+		},
+		{
+			"checksumSHA1": "DdH3xAkzAWJ4B/LGYJyCeRsly2I=",
+			"path": "github.com/mattn/go-runewidth",
+			"revision": "d6bea18f789704b5f83375793155289da36a3c7f",
+			"revisionTime": "2016-03-15T04:07:12Z"
+		},
+		{
+			"checksumSHA1": "rD6W6VE221Lemqao0wItRHzWa3s=",
+			"path": "github.com/olekukonko/tablewriter",
+			"revision": "c9c819c8d9cafaeff4dc99f1686394dcd274b66b",
+			"revisionTime": "2016-04-29T08:59:58Z"
+		},
+		{
+			"checksumSHA1": "cKNzpMpci3WUAzXpe+tVnBv2cjE=",
+			"path": "github.com/satori/go.uuid",
+			"revision": "f9ab0dce87d815821e221626b772e3475a0d2749",
+			"revisionTime": "2016-03-24T11:22:44Z"
+		}
+	],
+	"rootPath": "github.com/Comcast/akamai-gtm"
+}
