@@ -5,8 +5,9 @@ ARCH=$(shell uname -m)
 all: lint vet updatedeps build
 
 updatedeps:
-	go get
 	go get -u github.com/golang/lint/golint
+	go get -u github.com/kardianos/govendor
+	govendor sync
 
 install:
 	go install
