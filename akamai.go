@@ -256,7 +256,7 @@ func main() {
 			Action:      status,
 		},
 	}
-	app.Run(os.Args)
+	app.RunAndExitOnError()
 }
 
 func domains(c *cli.Context) error {
