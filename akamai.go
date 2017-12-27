@@ -17,7 +17,7 @@ import (
 func main() {
 	app := cli.NewApp()
 	app.Name = "akamai-gtm"
-	app.Version = "0.0.1"
+	app.Version = "0.0.2"
 	app.Usage = "A CLI to Akamai GTM configuration"
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
