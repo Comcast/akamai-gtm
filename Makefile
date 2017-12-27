@@ -40,6 +40,11 @@ release: build_releases
 		--name FILE \
 		--file FILE
 
+# NOTE: TravisCI will auto-deploy a GitHub release when a tag is pushed
+tag:
+	git tag $(TAG)
+	git push origin $(TAG)
+
 lint: updatedeps
 	golint -set_exit_status
 
