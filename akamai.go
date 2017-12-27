@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/codegangsta/cli"
 	"github.com/comcast/go-edgegrid/edgegrid"
 	"github.com/olekukonko/tablewriter"
+	"github.com/urfave/cli"
 )
 
 func main() {
