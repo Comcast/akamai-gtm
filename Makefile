@@ -26,8 +26,19 @@ build_releases: updatedeps
 	tar -zcf release/$(NAME)_$(VERSION)_darwin_$(ARCH).tgz -C build/Darwin $(NAME)
 
 release: build_releases
-	go get github.com/progrium/gh-release
-	gh-release create Comcast/$(NAME) $(VERSION) $(shell git rev-parse --abbrev-ref HEAD)
+	go get github.com/aktau/github-release
+	github-release release \
+		--user comcast \
+		--repo akamai-gtm \
+		--tag $(TAG) \
+		--name "$(TAG)" \
+		--description "akamai-gtm version $(VERSION)"
+	ls release/*.tgz | xargs -I FILE github-release upload \
+		--user comcast \
+		--repo akamai-gtm \
+		--tag $(TAG) \
+		--name FILE \
+		--file FILE
 
 lint: updatedeps
 	golint -set_exit_status
