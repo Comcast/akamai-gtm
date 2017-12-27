@@ -1,3 +1,4 @@
 build
 release
 vendor/github.com
+bin

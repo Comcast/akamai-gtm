@@ -14,10 +14,13 @@ import (
 	"github.com/urfave/cli"
 )
 
+// passed in via Makefile
+var version string
+
 func main() {
 	app := cli.NewApp()
 	app.Name = "akamai-gtm"
-	app.Version = "0.0.2"
+	app.Version = version
 	app.Usage = "A CLI to Akamai GTM configuration"
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
