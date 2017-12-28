@@ -16,7 +16,7 @@ Alternatively, if you choose to compile from Golang source code:
 * install Golang
 * set up your `$GOPATH`
 * clone `comcast/akamai-gtm` to `$GOPATH/src/github.com/comcast/akamai-gtm`
-* cd `$GOPATH/src/github.com/comcast/akamai-gtm && make`
+* cd `$GOPATH/src/github.com/comcast/akamai-gtm && make install`
 
 ## Usage
 
