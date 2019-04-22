@@ -4,7 +4,7 @@ TAG=v$(VERSION)
 ARCH=$(shell uname -m)
 PREFIX=/usr/local
 
-all: vet build
+all: build
 
 updatedeps:
 	go get -u golang.org/x/lint/golint
@@ -15,7 +15,7 @@ install: build
 	mkdir -p $(PREFIX)/bin
 	cp -v bin/$(NAME) $(PREFIX)/bin/$(NAME)
 
-build: updatedeps
+build: updatedeps vet
 	go build -ldflags "-X main.version=$(VERSION)" -o bin/$(NAME)
 
 build_releases: updatedeps
@@ -48,7 +48,5 @@ tag:
 lint: updatedeps
 	golint -set_exit_status
 
-# vet runs the Go source code static analysis tool `vet` to find
-# any common errors.
 vet:
 	go vet
