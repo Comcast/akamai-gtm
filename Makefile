@@ -4,10 +4,10 @@ TAG=v$(VERSION)
 ARCH=$(shell uname -m)
 PREFIX=/usr/local
 
-all: lint vet build
+all: vet build
 
 updatedeps:
-	go get -u github.com/golang/lint/golint
+	go get -u golang.org/x/lint/golint
 	go get -u github.com/kardianos/govendor
 	govendor sync
 
@@ -51,13 +51,4 @@ lint: updatedeps
 # vet runs the Go source code static analysis tool `vet` to find
 # any common errors.
 vet:
-	@go tool vet 2>/dev/null ; if [ $$? -eq 3 ]; then \
-		go get golang.org/x/tools/cmd/vet; \
-	fi
-	@echo "go tool vet $(VETARGS)"
-	@go tool vet $(VETARGS) . ; if [ $$? -eq 1 ]; then \
-		echo ""; \
-		echo "Vet found suspicious constructs. Please check the reported constructs"; \
-		echo "and fix them if necessary before submitting the code for review."; \
-		exit 1; \
-	fi
+	go vet
